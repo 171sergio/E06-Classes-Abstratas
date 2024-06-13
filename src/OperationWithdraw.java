@@ -1,5 +1,5 @@
-public class WithdrawOperation extends Operation {
-    public WithdrawOperation(float amount){
+public class OperationWithdraw extends Operation {
+    public OperationWithdraw(float amount){
         super('s', amount);
     }
 

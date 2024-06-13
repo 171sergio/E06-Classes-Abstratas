@@ -1,7 +1,7 @@
 
 import java.util.Date;
 
-public class Operation {
+public abstract class Operation {
 
     protected Date date;
 

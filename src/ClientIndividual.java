@@ -1,11 +1,11 @@
 import java.util.Objects;
 
-public class Individual extends Client {
+public class ClientIndividual extends Client {
     private int age;
     private char sex;
     private String CPF;
 
-    public Individual(String adress, String name, int age, char sex, String CPF) {
+    public ClientIndividual(String adress, String name, int age, char sex, String CPF) {
         super(adress, name);
         this.age = age;
         this.sex = sex;
@@ -27,7 +27,7 @@ public class Individual extends Client {
 
     @Override
     public boolean equals(Object obj){
-        Individual pFisicaComparada = (Individual) obj;
+        ClientIndividual pFisicaComparada = (ClientIndividual) obj;
         return pFisicaComparada.CPF.equals(this.CPF);
     }
 

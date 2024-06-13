@@ -29,7 +29,7 @@ public class Account {
     boolean deposit(float value) {
         if (value > 0.0) {
             this.balance += value;
-            this.operations[operationCounter] = new DepositOperation(value);
+            this.operations[operationCounter] = new OperationDeposit(value);
             this.operationCounter++;
             return true;
         } else {
@@ -41,7 +41,7 @@ public class Account {
     boolean withdraw(float value) {
         if (value > 0.0 && value <= this.balance) {
             this.balance -= value;
-            this.operations[operationCounter] = new WithdrawOperation(value);
+            this.operations[operationCounter] = new OperationWithdraw(value);
             this.operationCounter++;
             return true;
         } else {

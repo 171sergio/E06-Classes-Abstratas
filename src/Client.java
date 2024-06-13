@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class Client{
+public abstract class Client{
     protected String name;
     protected String adress;
     protected Date date;
@@ -13,6 +13,8 @@ class Client{
         this.date = new Date();
 
     }
+
+    abstract boolean autenticar(String key);
 
     public void print(){
         System.out.println("Cliente inválido");

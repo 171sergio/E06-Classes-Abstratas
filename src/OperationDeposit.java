@@ -1,5 +1,5 @@
-public class DepositOperation extends Operation {
-    public DepositOperation(float amount){
+public class OperationDeposit extends Operation {
+    public OperationDeposit(float amount){
         super('d', amount);
     }
 

@@ -1,13 +1,13 @@
 import java.util.Objects;
 
-public class JuridicalPerson extends Client{
+public class ClientJP extends Client{
 
     private String sector;
     private int numFuncionarios;
     private String CNPJ;
 
 
-    public JuridicalPerson(String adress, String name, String sector, int numFuncionarios, String CNPJ) {
+    public ClientJP(String adress, String name, String sector, int numFuncionarios, String CNPJ) {
         super(adress, name);
         this.sector = sector;
         this.numFuncionarios = numFuncionarios;
@@ -26,12 +26,16 @@ public class JuridicalPerson extends Client{
     }
     @Override
     public boolean equals(Object obj){
-        JuridicalPerson pJcomp = (JuridicalPerson) obj;
+        ClientJP pJcomp = (ClientJP) obj;
         return pJcomp.CNPJ.equals(this.CNPJ);
     }
     @Override
     public int hashCode() {
         return Objects.hash(CNPJ);
+    }
+    @Override
+    boolean autenticar(String key) {
+        return key.equals(this.CNPJ);
     }
 
 

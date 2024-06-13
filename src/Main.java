@@ -2,21 +2,22 @@ public class Main {
 
     public static void main(String[] args) {
         // Instâncias originais
-        Client pessoa1 = new Individual("Rua XYZ, 123", "Jhonatan Bruno", 30, 'M', "123456789");
+        Client pessoa1 = new ClientIndividual("Rua XYZ, 123", "Jhonatan Bruno", 30, 'M', "123456789");
         Account contapf1 = new Account(pessoa1, 1000.0, 123456, 500.0F, "001");
-        Client empresa1 = new JuridicalPerson("R. Rio Pomba", "Primo's Barber", "Beleza", 3, "12345678901234");
+        Client empresa1 = new ClientJP("R. Rio Pomba", "Primo's Barber", "Beleza", 3, "12345678901234");
         Account contapj1 = new Account(empresa1, 10000.0, 5789, 200000.0F, "002");
 
         // Instâncias com dados diferentes
-        Client pessoa2 = new Individual("Rua ABC, 456", "Carlos Silva", 25, 'M', "987654321");
+        Client pessoa2 = new ClientIndividual("Rua ABC, 456", "Carlos Silva", 25, 'M', "987654321");
         Account contapf2 = new Account(pessoa2, 2000.0, 654321, 1000.0F, "003");
-        Client empresa2 = new JuridicalPerson("Av. Brasil", "Tech Solutions", "Tecnologia", 50, "43210987654321");
+        Client empresa2 = new ClientJP("Av. Brasil", "Tech Solutions", "Tecnologia", 50, "43210987654321");
         Account contapj2 = new Account(empresa2, 15000.0, 9876, 300000.0F, "004");
 
         // Instâncias com dados iguais
-        Client pessoa3 = new Individual("Rua XYZ, 123", "Jhonatan Bruno", 30, 'M', "123456789");
+
+        Client pessoa3 = new ClientIndividual("Rua XYZ, 123", "Jhonatan Bruno", 30, 'M', "123456789");
         Account contapf3 = new Account(pessoa3, 3000.0, 123456, 750.0F, "001");
-        Client empresa3 = new JuridicalPerson("R. Rio Pomba", "Primo's Barber", "Beleza", 3, "12345678901234");
+        Client empresa3 = new ClientJP("R. Rio Pomba", "Primo's Barber", "Beleza", 3, "12345678901234");
         Account contapj3 = new Account(empresa3, 25000.0, 5789, 400000.0F, "002");
 
         // Testando a comparação
