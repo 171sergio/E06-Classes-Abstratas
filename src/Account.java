@@ -14,7 +14,7 @@ public abstract class Account {
 
     public static int totAccounts=0;
 
-    public Account(Client owner, double balance, int ID, float limit, String agency) {
+    public Account(Client owner, double balance, int ID, double limit, String agency) {
         this.owner = owner;
         this.balance = balance;
         this.ID = ID;
@@ -114,4 +114,6 @@ public abstract class Account {
     public int getOperationCounter(){
         return operationCounter;
     }
+
+    public abstract void setLimit(double newlimit);
 }
