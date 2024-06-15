@@ -29,15 +29,16 @@ public class ClientJP extends Client{
         ClientJP pJcomp = (ClientJP) obj;
         return pJcomp.CNPJ.equals(this.CNPJ);
     }
-    @Override
-    public int hashCode() {
-        return Objects.hash(CNPJ);
-    }
+
     @Override
     boolean autenticar(String key) {
         return key.equals(this.CNPJ);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(CNPJ);
+    }
 
     public String getCNPJ() {
         return CNPJ;

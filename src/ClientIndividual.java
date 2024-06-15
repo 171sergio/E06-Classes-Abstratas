@@ -36,6 +36,9 @@ public class ClientIndividual extends Client {
         return Objects.hash(CPF);
     }
 
+    @Override
+    boolean autenticar(String key) { return key.equals(this.CPF); }
+
 
     public String getCPF() {
         return CPF;

@@ -1,11 +1,11 @@
 
 
-public class Account {
+public abstract class Account {
 
     private Client owner;
     private double balance;
     private int ID;
-    private float limit;
+    protected double limit;
     private String agency;
 
     private Operation[] operations;
@@ -66,15 +66,15 @@ public class Account {
      " Número da conta: " + this.ID+ "\n" +
      " Saldo atual: " + this.balance+ "\n" +
      " Limite: " + this.limit + "\n\n" ;
-						 
+
 		return accountStr;
 	}
-    @Override 
+    @Override
     public boolean equals(Object obj){
         Account actcomp = (Account) obj;
         return actcomp.ID == this.ID;
     }
-    
+
 
     void printStatemant() {
         for (int i = 0; i < this.operationCounter; i++) {
@@ -103,7 +103,7 @@ public class Account {
         return balance;
     }
 
-    public float getLimit() {
+    public double getLimit() {
         return limit;
     }
 
